@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(336, 47%, 62%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Secret Garden Stitches Brand Colors */
+  --rose-pink: hsl(335, 59%, 63%);
+  --coral-terracotta: hsl(11, 61%, 59%);
+  --soft-red: hsl(2, 60%, 59%);
+  --orchid-purple: hsl(296, 69%, 53%);
+  --dusty-mauve: hsl(339, 29%, 68%);
+  --blush-pink: hsl(3, 52%, 69%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(336, 47%, 62%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-inter antialiased bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .gradient-bg {
+    background: linear-gradient(135deg, var(--rose-pink) 0%, var(--dusty-mauve) 50%, var(--blush-pink) 100%);
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, var(--rose-pink), var(--orchid-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .bg-rose-pink {
+    background-color: var(--rose-pink);
+  }
+  
+  .bg-coral-terracotta {
+    background-color: var(--coral-terracotta);
+  }
+  
+  .bg-soft-red {
+    background-color: var(--soft-red);
+  }
+  
+  .bg-orchid-purple {
+    background-color: var(--orchid-purple);
+  }
+  
+  .bg-dusty-mauve {
+    background-color: var(--dusty-mauve);
+  }
+  
+  .bg-blush-pink {
+    background-color: var(--blush-pink);
+  }
+  
+  .text-rose-pink {
+    color: var(--rose-pink);
+  }
+  
+  .text-coral-terracotta {
+    color: var(--coral-terracotta);
+  }
+  
+  .text-soft-red {
+    color: var(--soft-red);
+  }
+  
+  .text-orchid-purple {
+    color: var(--orchid-purple);
+  }
+  
+  .text-dusty-mauve {
+    color: var(--dusty-mauve);
+  }
+  
+  .text-blush-pink {
+    color: var(--blush-pink);
+  }
+  
+  .border-rose-pink {
+    border-color: var(--rose-pink);
+  }
+  
+  .border-coral-terracotta {
+    border-color: var(--coral-terracotta);
+  }
+  
+  .border-orchid-purple {
+    border-color: var(--orchid-purple);
+  }
+  
+  .hover\:bg-rose-pink:hover {
+    background-color: var(--rose-pink);
+  }
+  
+  .hover\:text-rose-pink:hover {
+    color: var(--rose-pink);
+  }
+  
+  .focus\:ring-rose-pink:focus {
+    --tw-ring-color: var(--rose-pink);
+  }
+}
